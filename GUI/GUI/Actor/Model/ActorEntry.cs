@@ -1,4 +1,6 @@
-﻿namespace GUI.Actor.Model
+﻿using GUI.Datatypes;
+
+namespace GUI.Actor.Model
 {
     public struct ActorEntry
     {
@@ -12,6 +14,8 @@
         public byte Job { get; set; }
         public byte Level { get; set; }
         public byte World { get; set; }
+        public Vector3 location {get; set;}
+
         public ObjectKind ObjectKind { get; set; }
         public byte SubKind { get; set; }
         public ActorAppearance Appearance { get; set; }

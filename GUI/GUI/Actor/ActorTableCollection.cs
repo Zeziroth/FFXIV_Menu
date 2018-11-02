@@ -43,6 +43,7 @@ namespace GUI.Actor
                     CompanyTag = _game.Process.ReadString(address + _game.Definitions.CompanyTag),
                     ObjectKind = (ObjectKind)_game.Process.ReadByte(address + _game.Definitions.ObjectKind),
                     SubKind = _game.Process.ReadByte(address + _game.Definitions.SubKind),
+                    location = new Datatypes.Vector3(_game.Process.ReadFloat(address + _game.Definitions.PositionX), _game.Process.ReadFloat(address + _game.Definitions.PositionY), _game.Process.ReadFloat(address + _game.Definitions.PositionZ)),
 
                     Appearance = new ActorAppearance()
                     {

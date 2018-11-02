@@ -61,7 +61,7 @@ namespace GUI.Memory
         /// <param name="offset">Offset to read from.</param>
         /// <returns>Read UInt32.</returns>
         public uint ReadUInt32(ulong offset) => BitConverter.ToUInt32(ReadBytes(offset, 4), 0);
-
+        public float ReadFloat(ulong offset) => BitConverter.ToSingle(ReadBytes(offset, 4), 0);
         /// <summary>
         /// Read a UInt16 from the specified offset.
         /// </summary>
@@ -178,7 +178,6 @@ namespace GUI.Memory
         {
             Kernel32.WriteProcessMemory(BaseProcess.Handle, new UIntPtr(offset), data, new UIntPtr((uint)data.Length), IntPtr.Zero);
         }
-
         #endregion
 
         #region Miscellaneous

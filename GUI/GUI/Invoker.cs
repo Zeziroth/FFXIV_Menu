@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI
@@ -16,6 +17,7 @@ namespace GUI
 
             return control;
         }
+
         public enum Mode
         {
             SetMaximum = 0,

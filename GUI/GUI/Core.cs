@@ -75,6 +75,7 @@ namespace GUI
             {
                 main = _main;
             }
+
             InitClient();
         }
         public static void MainInit()

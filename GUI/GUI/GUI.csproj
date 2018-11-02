@@ -79,6 +79,7 @@
     <Compile Include="Actor\Model\ActorEntry.cs" />
     <Compile Include="Actor\Model\ObjectKind.cs" />
     <Compile Include="Core.cs" />
+    <Compile Include="Datatypes\Vector3.cs" />
     <Compile Include="Definitions.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="Memory\Native\Constants.cs" />

@@ -23,6 +23,10 @@ namespace GUI
 
         public ulong ActorTable = 0x199DA38;
 
+        public ulong PositionX = 0xA0;
+        public ulong PositionY = 0xA4;
+        public ulong PositionZ = 0xA8;
+
         public ulong ActorID = 0x74;
         public ulong Name = 0x30;
         public ulong BnpcBase = 0x80;
