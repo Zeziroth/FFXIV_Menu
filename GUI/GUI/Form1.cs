@@ -35,13 +35,32 @@ namespace GUI
         {
             while (true)
             {
-                Invoker.ClearList(listView_Player);
+                if (checkBox_Playerlist.Checked)
+                {
+                    Invoker.ClearList(listView_Player);
+                }
+
+                if (checkBox_NPCList.Checked)
+                {
+                    Invoker.ClearList(listView_NPC);
+                }
+                if (checkBox_MobList.Checked)
+                {
+                    Invoker.ClearList(listView_Mobs);
+                }
+                if (checkBox_EntityList.Checked)
+                {
+                    Invoker.ClearList(listView_Entities);
+                }
                 xivgame.Update();
+                
 
                 foreach (var entity in xivgame.ActorTable.Cast<ActorEntry>())
                 {
-                    ListViewItem itm = new ListViewItem(new string[] { entity.Name,  entity.location.ToString() }, 0, Color.Red, listView_Player.BackColor, listView_Player.Font);
+                    Vector3 mainPos = xivgame.ActorTable[0].location;
+                    ListViewItem itm = new ListViewItem(new string[] { entity.Name,  entity.Level.ToString(), Math.Round(mainPos.DistanceTo(entity.location),1).ToString() + "m"}, 0, Color.Red, listView_Player.BackColor, listView_Player.Font);
                     itm.Tag = entity.location;
+
                     switch (entity.ObjectKind)
                     {
                         case ObjectKind.Player:

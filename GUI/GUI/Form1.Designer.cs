@@ -47,6 +47,10 @@
             this.checkBox_NPCList = new System.Windows.Forms.CheckBox();
             this.checkBox_MobList = new System.Windows.Forms.CheckBox();
             this.checkBox_EntityList = new System.Windows.Forms.CheckBox();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,13 +58,14 @@
             // 
             this.listView_Player.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader9});
             this.listView_Player.ContextMenuStrip = this.contextMenuStrip1;
             this.listView_Player.FullRowSelect = true;
-            this.listView_Player.Location = new System.Drawing.Point(588, 13);
+            this.listView_Player.Location = new System.Drawing.Point(12, 12);
             this.listView_Player.MultiSelect = false;
             this.listView_Player.Name = "listView_Player";
-            this.listView_Player.Size = new System.Drawing.Size(333, 304);
+            this.listView_Player.Size = new System.Drawing.Size(463, 304);
             this.listView_Player.TabIndex = 1;
             this.listView_Player.UseCompatibleStateImageBehavior = false;
             this.listView_Player.View = System.Windows.Forms.View.Details;
@@ -73,20 +78,21 @@
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Location";
-            this.columnHeader2.Width = 200;
+            this.columnHeader2.Text = "Level";
+            this.columnHeader2.Width = 100;
             // 
             // listView_NPC
             // 
             this.listView_NPC.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader10});
             this.listView_NPC.ContextMenuStrip = this.contextMenuStrip1;
             this.listView_NPC.FullRowSelect = true;
-            this.listView_NPC.Location = new System.Drawing.Point(927, 13);
+            this.listView_NPC.Location = new System.Drawing.Point(481, 12);
             this.listView_NPC.MultiSelect = false;
             this.listView_NPC.Name = "listView_NPC";
-            this.listView_NPC.Size = new System.Drawing.Size(333, 304);
+            this.listView_NPC.Size = new System.Drawing.Size(463, 304);
             this.listView_NPC.TabIndex = 2;
             this.listView_NPC.UseCompatibleStateImageBehavior = false;
             this.listView_NPC.View = System.Windows.Forms.View.Details;
@@ -100,19 +106,20 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Level";
-            this.columnHeader4.Width = 150;
+            this.columnHeader4.Width = 100;
             // 
             // listView_Mobs
             // 
             this.listView_Mobs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader11});
             this.listView_Mobs.ContextMenuStrip = this.contextMenuStrip1;
             this.listView_Mobs.FullRowSelect = true;
-            this.listView_Mobs.Location = new System.Drawing.Point(588, 366);
+            this.listView_Mobs.Location = new System.Drawing.Point(12, 341);
             this.listView_Mobs.MultiSelect = false;
             this.listView_Mobs.Name = "listView_Mobs";
-            this.listView_Mobs.Size = new System.Drawing.Size(333, 304);
+            this.listView_Mobs.Size = new System.Drawing.Size(463, 304);
             this.listView_Mobs.TabIndex = 3;
             this.listView_Mobs.UseCompatibleStateImageBehavior = false;
             this.listView_Mobs.View = System.Windows.Forms.View.Details;
@@ -126,19 +133,20 @@
             // columnHeader6
             // 
             this.columnHeader6.Text = "Level";
-            this.columnHeader6.Width = 150;
+            this.columnHeader6.Width = 100;
             // 
             // listView_Entities
             // 
             this.listView_Entities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
-            this.columnHeader8});
+            this.columnHeader8,
+            this.columnHeader12});
             this.listView_Entities.ContextMenuStrip = this.contextMenuStrip1;
             this.listView_Entities.FullRowSelect = true;
-            this.listView_Entities.Location = new System.Drawing.Point(927, 366);
+            this.listView_Entities.Location = new System.Drawing.Point(481, 341);
             this.listView_Entities.MultiSelect = false;
             this.listView_Entities.Name = "listView_Entities";
-            this.listView_Entities.Size = new System.Drawing.Size(333, 304);
+            this.listView_Entities.Size = new System.Drawing.Size(463, 304);
             this.listView_Entities.TabIndex = 4;
             this.listView_Entities.UseCompatibleStateImageBehavior = false;
             this.listView_Entities.View = System.Windows.Forms.View.Details;
@@ -152,7 +160,7 @@
             // columnHeader8
             // 
             this.columnHeader8.Text = "Level";
-            this.columnHeader8.Width = 150;
+            this.columnHeader8.Width = 100;
             // 
             // contextMenuStrip1
             // 
@@ -171,7 +179,7 @@
             // checkBox_Playerlist
             // 
             this.checkBox_Playerlist.AutoSize = true;
-            this.checkBox_Playerlist.Location = new System.Drawing.Point(588, 318);
+            this.checkBox_Playerlist.Location = new System.Drawing.Point(12, 317);
             this.checkBox_Playerlist.Name = "checkBox_Playerlist";
             this.checkBox_Playerlist.Size = new System.Drawing.Size(51, 18);
             this.checkBox_Playerlist.TabIndex = 6;
@@ -181,7 +189,7 @@
             // checkBox_NPCList
             // 
             this.checkBox_NPCList.AutoSize = true;
-            this.checkBox_NPCList.Location = new System.Drawing.Point(927, 318);
+            this.checkBox_NPCList.Location = new System.Drawing.Point(481, 317);
             this.checkBox_NPCList.Name = "checkBox_NPCList";
             this.checkBox_NPCList.Size = new System.Drawing.Size(51, 18);
             this.checkBox_NPCList.TabIndex = 7;
@@ -191,7 +199,7 @@
             // checkBox_MobList
             // 
             this.checkBox_MobList.AutoSize = true;
-            this.checkBox_MobList.Location = new System.Drawing.Point(588, 671);
+            this.checkBox_MobList.Location = new System.Drawing.Point(12, 646);
             this.checkBox_MobList.Name = "checkBox_MobList";
             this.checkBox_MobList.Size = new System.Drawing.Size(51, 18);
             this.checkBox_MobList.TabIndex = 8;
@@ -201,18 +209,38 @@
             // checkBox_EntityList
             // 
             this.checkBox_EntityList.AutoSize = true;
-            this.checkBox_EntityList.Location = new System.Drawing.Point(927, 671);
+            this.checkBox_EntityList.Location = new System.Drawing.Point(481, 646);
             this.checkBox_EntityList.Name = "checkBox_EntityList";
             this.checkBox_EntityList.Size = new System.Drawing.Size(51, 18);
             this.checkBox_EntityList.TabIndex = 9;
             this.checkBox_EntityList.Text = "Scan";
             this.checkBox_EntityList.UseVisualStyleBackColor = true;
             // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Distance";
+            this.columnHeader9.Width = 100;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Distance";
+            this.columnHeader10.Width = 100;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Distance";
+            this.columnHeader11.Width = 100;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Distance";
+            this.columnHeader12.Width = 100;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 722);
+            this.ClientSize = new System.Drawing.Size(970, 668);
             this.Controls.Add(this.checkBox_EntityList);
             this.Controls.Add(this.checkBox_MobList);
             this.Controls.Add(this.checkBox_NPCList);
@@ -253,6 +281,10 @@
         private System.Windows.Forms.CheckBox checkBox_NPCList;
         private System.Windows.Forms.CheckBox checkBox_MobList;
         private System.Windows.Forms.CheckBox checkBox_EntityList;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
     }
 }
 
