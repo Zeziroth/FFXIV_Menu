@@ -41,6 +41,12 @@ namespace GUI
         public ulong ObjectKind = 0x8C;
         public ulong SubKind = 0x8D;
 
+        public ulong MAX_HP = 0x1750;
+        public ulong CUR_HP = 0x1754;
+
+        public ulong MAX_MP = 0x1758;
+        public ulong CUR_MP = 0x175C;
+
         public ulong Head = 0x15E8;
         public ulong Body = 0x15EC;
         public ulong Hands = 0x15F0;
@@ -55,27 +61,16 @@ namespace GUI
         public ulong MainWep = 0x1342;
         public ulong OffWep = 0x13A8;
 
-        private static readonly Uri DefinitionStoreUrl = new Uri("https://raw.githubusercontent.com/goaaats/Nhaama/master/definitions/FFXIV/");
 
         public static Definitions Get(CustomProcess p, string version, Game.GameType gameType)
         {
-            using (WebClient client = new WebClient())
+            try
             {
-                var uri = new Uri(DefinitionStoreUrl, $"https://raw.githubusercontent.com/goaaats/Nhaama/master/definitions/FFXIV/dx11/2018.09.27.0000.0000.json");
-
-                try
-                {
-                    var definitionJson = client.DownloadString(uri);
-                    var serializer = p.GetSerializer();
-                    var deserializedDefinition = serializer.DeserializeObject<Definitions>(definitionJson);
-
-                    //return deserializedDefinition;
-                    return new Definitions();
-                }
-                catch (WebException exc)
-                {
-                    throw new Exception("Could not get definitions for version: " + uri, exc);
-                }
+                return new Definitions();
+            }
+            catch (WebException exc)
+            {
+                throw new Exception("Could not get definitions for version", exc);
             }
         }
 

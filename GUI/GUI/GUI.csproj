@@ -81,6 +81,7 @@
     <Compile Include="Core.cs" />
     <Compile Include="Datatypes\Vector3.cs" />
     <Compile Include="Definitions.cs" />
+    <Compile Include="FFXIV_Core.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="Memory\Native\Constants.cs" />
     <Compile Include="Memory\Native\Kernel32.cs" />

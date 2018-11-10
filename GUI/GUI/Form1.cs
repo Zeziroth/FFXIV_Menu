@@ -17,9 +17,9 @@ namespace GUI
 {
     public partial class Form1 : Form
     {
-        CustomProcess proc = Process.GetProcessesByName("ffxiv_dx11")[0].GetNhaamaProcess();
+        public static CustomProcess proc = Process.GetProcessesByName("ffxiv_dx11")[0].GetNhaamaProcess();
 
-        Game xivgame = null;
+        public static Game xivgame = null;
         public Form1()
         {
             InitializeComponent();
@@ -133,9 +133,7 @@ namespace GUI
 
                 var address = new Pointer(xivgame.Process, xivgame.Definitions.ActorTable + 8, 0);
 
-                proc.Write(address + xivgame.Definitions.PositionX, location.x);
-                proc.Write(address + xivgame.Definitions.PositionY, location.y);
-                proc.Write(address + xivgame.Definitions.PositionZ, location.z);
+                FFXIV_Core.TeleportTo(location);
             }
         }
 
@@ -152,6 +150,12 @@ namespace GUI
         private void listView_Entities_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Teleport_ListView((ListView)sender);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Vector3 newLocation = new Vector3(FFXIV_Core.MapToMemory((float)numericUpDown1.Value), 60f, FFXIV_Core.MapToMemory((float)numericUpDown2.Value));
+            FFXIV_Core.TeleportTo(newLocation);
         }
     }
 }
