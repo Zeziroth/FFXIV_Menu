@@ -17,9 +17,9 @@ namespace GUI.Actor
 
         public void Update()
         {
-            var numEntries =
-                _game.Process.ReadUInt64(
-                    _game.Process.GetModuleBasedOffset("ffxiv_dx11.exe", _game.Definitions.ActorTable));
+            var numEntries = 
+            _game.Process.ReadUInt64(
+                _game.Process.GetModuleBasedOffset("ffxiv_dx11.exe", _game.Definitions.ActorTable));
 
             _currentEntries = new ActorEntry[numEntries];
 

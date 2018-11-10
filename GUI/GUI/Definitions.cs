@@ -21,7 +21,7 @@ namespace GUI
         public Pointer Time;
         public Pointer Weather;
 
-        public ulong ActorTable = 0x199DA38;
+        public ulong ActorTable = 0x19A5760; // NEW 10.11.2018
 
         public ulong PositionX = 0xA0;
         public ulong PositionY = 0xA4;
@@ -69,7 +69,8 @@ namespace GUI
                     var serializer = p.GetSerializer();
                     var deserializedDefinition = serializer.DeserializeObject<Definitions>(definitionJson);
 
-                    return deserializedDefinition;
+                    //return deserializedDefinition;
+                    return new Definitions();
                 }
                 catch (WebException exc)
                 {
